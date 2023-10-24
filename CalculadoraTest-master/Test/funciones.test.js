@@ -9,6 +9,24 @@ describe("*** VALIDAR SUMAS ***", () => {
     test("10 + 20 = 30", () => {
       expect(sumar(10, 20)).toEqual(30);
     });
+
+    test('Error: "hola" + 1 = hola1', () => {
+      try {
+        sumar("hola", 1);
+        // Si no se lanzó una excepción, la prueba fallará
+      } catch (error) {
+        expect(error.message).toThrow(Error);
+      }
+    });
+
+    test('Error: 0 + 1 = hola1', () => {
+      try {
+        sumar(0, 1);
+        // Si no se lanzó una excepción, la prueba fallará
+      } catch (error) {
+        expect(error.message).toThrow(Error);
+      }
+    });
 });
   
 describe("*** VALIDAR RESTAS ***", () => {
@@ -20,6 +38,24 @@ describe("*** VALIDAR RESTAS ***", () => {
     test("87 - 523 = -436", () => {
       expect(resta(87, 523)).toEqual(-436);
     });
+
+    test('Error: "hola" - 1 = hola1', () => {
+      try {
+        resta("hola", 1);
+        // Si no se lanzó una excepción, la prueba fallará
+      } catch (error) {
+        expect(error.message).toThrow(Error);
+      }
+    });
+
+    test('Error: 0 - 1 = hola1', () => {
+      try {
+        resta(0, 1);
+        // Si no se lanzó una excepción, la prueba fallará
+      } catch (error) {
+        expect(error.message).toThrow(Error);
+      }
+    });
 });
     
 describe("*** VALIDAR MULTIPLICACIONES ***", () => {
@@ -30,6 +66,24 @@ describe("*** VALIDAR MULTIPLICACIONES ***", () => {
       test("1000 * 8.5 = 8500", () => {
         expect(mult(1000, 8.5)).toEqual(8500);
       });
+
+      test('Error: "hola" * 1 = hola1', () => {
+        try {
+          mult("hola", 1);
+          // Si no se lanzó una excepción, la prueba fallará
+        } catch (error) {
+          expect(error.message).toThrow(Error);
+        }
+      });
+  
+      test('Error: 0 * 1 = 1', () => {
+        try {
+          mult(0, 1);
+          // Si no se lanzó una excepción, la prueba fallará
+        } catch (error) {
+          expect(error.message).toThrow(Error);
+        }
+      });
 });
 
 describe("*** VALIDAR DIVISIONES ***", () => {
@@ -38,8 +92,26 @@ describe("*** VALIDAR DIVISIONES ***", () => {
     });
   
     
-    //test("20 / 0 = 0", () => {
-    //    expect(div(99, 0).toEqual(0));
+    //test("20 / 1 = 0", () => {
+    //    expect(div(20, 1).toEqual(20));
     //});
+
+    test('Error: "hola" + 1 = hola1', () => {
+      try {
+        div("hola", 1);
+        // Si no se lanzó una excepción, la prueba fallará
+      } catch (error) {
+        expect(error.message).toThrow(Error);
+      }
+    });
+
+    test('Error: 0 / 1 = 0', () => {
+      try {
+        div(0, 1);
+        // Si no se lanzó una excepción, la prueba fallará
+      } catch (error) {
+        expect(error.message).toThrow(Error);
+      }
+    });
 });
     
